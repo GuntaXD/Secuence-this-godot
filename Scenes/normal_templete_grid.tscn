@@ -1,0 +1,244 @@
+[gd_scene load_steps=3 format=3 uid="uid://cici4okh2qqa8"]
+
+[ext_resource type="Script" path="res://Scripts/easy_templete_grid.gd" id="1_civl2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hwue"]
+
+[node name="NormalTempleteGrid" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_civl2")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button1" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button1"]
+layout_mode = 2
+text = "Button 1
+"
+
+[node name="TouchScreenButton1" type="TouchScreenButton" parent="GridContainer/Button1"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button2" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button2"]
+layout_mode = 2
+text = "Button 2
+"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="GridContainer/Button2"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button3" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button3"]
+layout_mode = 2
+text = "Button 3
+"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="GridContainer/Button3"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button4" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button4"]
+layout_mode = 2
+text = "Button 4
+"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="GridContainer/Button4"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button5" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button5"]
+layout_mode = 2
+text = "Button 5
+"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="GridContainer/Button5"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button6" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button6"]
+layout_mode = 2
+text = "Button 6"
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="GridContainer/Button6"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button7" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button7"]
+layout_mode = 2
+text = "Button 7
+"
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="GridContainer/Button7"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button8" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button8"]
+layout_mode = 2
+text = "Button 8
+"
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="GridContainer/Button8"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button9" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button9"]
+layout_mode = 2
+text = "Button 9
+"
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="GridContainer/Button9"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button10" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button10"]
+layout_mode = 2
+text = "Button 10
+"
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="GridContainer/Button10"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button11" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button11"]
+layout_mode = 2
+text = "Button 11
+"
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="GridContainer/Button11"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button12" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button12"]
+layout_mode = 2
+text = "Button 12"
+
+[node name="TouchScreenButton12" type="TouchScreenButton" parent="GridContainer/Button12"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button13" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button13"]
+layout_mode = 2
+text = "Button 13"
+
+[node name="TouchScreenButton13" type="TouchScreenButton" parent="GridContainer/Button13"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button14" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button14"]
+layout_mode = 2
+text = "Button 14
+"
+
+[node name="TouchScreenButton14" type="TouchScreenButton" parent="GridContainer/Button14"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button15" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button15"]
+layout_mode = 2
+text = "Button 15
+"
+
+[node name="TouchScreenButton15" type="TouchScreenButton" parent="GridContainer/Button15"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[node name="Button16" type="CenterContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Button16"]
+layout_mode = 2
+text = "Button 16"
+
+[node name="TouchScreenButton16" type="TouchScreenButton" parent="GridContainer/Button16"]
+shape = SubResource("RectangleShape2D_4hwue")
+
+[connection signal="pressed" from="GridContainer/Button1/TouchScreenButton1" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button2/TouchScreenButton2" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button3/TouchScreenButton3" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button4/TouchScreenButton4" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button5/TouchScreenButton5" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button6/TouchScreenButton6" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button7/TouchScreenButton7" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button8/TouchScreenButton8" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button9/TouchScreenButton9" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button10/TouchScreenButton10" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button11/TouchScreenButton11" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button12/TouchScreenButton12" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button13/TouchScreenButton13" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button14/TouchScreenButton14" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button15/TouchScreenButton15" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button16/TouchScreenButton16" to="." method="_on_touch_screen_button_pressed"]

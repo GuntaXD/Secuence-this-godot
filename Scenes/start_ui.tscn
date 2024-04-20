@@ -1,0 +1,257 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbeniwp4rqj0k"]
+
+[ext_resource type="Script" path="res://Scripts/start_ui.gd" id="1_lipu2"]
+[ext_resource type="Texture2D" uid="uid://h2kc7l3xvxft" path="res://Assets/Config_button.png" id="2_52bua"]
+[ext_resource type="Script" path="res://Scripts/ModeOptions.gd" id="3_xocc8"]
+[ext_resource type="Script" path="res://Scripts/DifficultyOptions.gd" id="4_4gs7b"]
+
+[sub_resource type="Theme" id="Theme_0ppn1"]
+default_font_size = 84
+
+[sub_resource type="Theme" id="Theme_apjaw"]
+default_font_size = 24
+
+[sub_resource type="Theme" id="Theme_3nh4l"]
+default_font_size = 34
+
+[sub_resource type="Theme" id="Theme_pwc3h"]
+default_font_size = 34
+
+[sub_resource type="Theme" id="Theme_aamsr"]
+default_font_size = 34
+
+[sub_resource type="Theme" id="Theme_qywl7"]
+default_font_size = 34
+
+[node name="StartUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_lipu2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.380392, 0.568627, 0.635294, 1)
+
+[node name="Logo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -201.5
+offset_top = 180.0
+offset_right = 201.5
+offset_bottom = 295.0
+grow_horizontal = 2
+theme = SubResource("Theme_0ppn1")
+text = "OrderThis"
+
+[node name="DevName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 123.0
+offset_bottom = 54.0
+theme = SubResource("Theme_apjaw")
+text = "GuntaXD"
+
+[node name="ConfigButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -181.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 189.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_52bua")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 52.5
+offset_right = 300.0
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayBtn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme = SubResource("Theme_3nh4l")
+text = "Play"
+
+[node name="ModeLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = SubResource("Theme_pwc3h")
+text = "Mode:"
+
+[node name="ModeOptions" type="OptionButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+script = ExtResource("3_xocc8")
+
+[node name="DifficultyLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = SubResource("Theme_pwc3h")
+text = "Difficulty:"
+
+[node name="DifficultyOptions" type="OptionButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+script = ExtResource("4_4gs7b")
+
+[node name="ConfigWindow" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ConfigWindow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.121569, 0.121569, 0.121569, 0.74902)
+
+[node name="ColorRect2" type="ColorRect" parent="ConfigWindow"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.160784, 0.160784, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigWindow/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfigWindow/ColorRect2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="LanguageLabel" type="Label" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_aamsr")
+text = "Language:"
+
+[node name="SpanishBtn" type="Button" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Spanish"
+
+[node name="EnglishBtn" type="Button" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "English"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ConfigWindow/ColorRect2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="SoundLabel" type="Label" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_qywl7")
+text = "Sound:"
+
+[node name="SoundSlider" type="HSlider" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SoundPercentageLabel" type="Label" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "50%"
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ConfigWindow/ColorRect2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="MusicLabel" type="Label" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme = SubResource("Theme_qywl7")
+text = "Music:"
+
+[node name="MusicSlider" type="HSlider" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MusicPercentageLabel" type="Label" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "50%"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ConfigWindow/ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="BackConfigBtn" type="Button" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="ExitConfigBtn" type="Button" parent="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[connection signal="pressed" from="ConfigButton" to="." method="_on_config_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="item_selected" from="HBoxContainer/ModeOptions" to="." method="_on_mode_options_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/ModeOptions" to="HBoxContainer/ModeOptions" method="_on_item_selected"]
+[connection signal="pressed" from="HBoxContainer/ModeOptions" to="." method="_on_mode_options_pressed"]
+[connection signal="item_selected" from="HBoxContainer/DifficultyOptions" to="." method="_on_difficulty_options_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/DifficultyOptions" to="HBoxContainer/DifficultyOptions" method="_on_item_selected"]
+[connection signal="pressed" from="HBoxContainer/DifficultyOptions" to="." method="_on_difficulty_options_pressed"]
+[connection signal="value_changed" from="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer2/SoundSlider" to="." method="_on_sound_slider_value_changed"]
+[connection signal="value_changed" from="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer4/BackConfigBtn" to="." method="_on_back_config_btn_pressed"]
+[connection signal="pressed" from="ConfigWindow/ColorRect2/VBoxContainer/HBoxContainer4/ExitConfigBtn" to="." method="_on_exit_config_btn_pressed"]

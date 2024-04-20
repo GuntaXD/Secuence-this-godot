@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://wia21k3gqyu"]
+
+[ext_resource type="AudioStream" uid="uid://chsom7hpxobfj" path="res://Assets/Patreon Goal Reward Loops - Track 12.wav" id="1_1dryw"]
+[ext_resource type="Script" path="res://Scripts/audio_streams.gd" id="1_58bn8"]
+[ext_resource type="AudioStream" uid="uid://cndq0w8vu487r" path="res://Assets/sound1.wav" id="3_41unt"]
+
+[node name="AudioStreams" type="Node"]
+script = ExtResource("1_58bn8")
+
+[node name="MusicBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_1dryw")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_41unt")
+bus = &"SFX"

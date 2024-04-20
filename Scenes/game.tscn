@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://diihhflvbtj4n"]
+
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_l7ixy"]
+[ext_resource type="Theme" uid="uid://b47ml6di1bivv" path="res://Themes/BigLetters.tres" id="3_cwwag"]
+[ext_resource type="Script" path="res://Scripts/TimerUI.gd" id="3_dj12j"]
+[ext_resource type="Script" path="res://Scripts/FinalScreen.gd" id="3_goic3"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_l7ixy")
+
+[node name="TemplateContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(1024, 500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_right = 1024.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(960, 100)
+offset_left = 32.0
+offset_right = 992.0
+offset_bottom = 100.0
+alignment = 1
+
+[node name="BackBtn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Back"
+
+[node name="Hits" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "HITS: 0"
+
+[node name="TimerUI" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "00:00"
+script = ExtResource("3_dj12j")
+
+[node name="FinalScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1024.0
+offset_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_goic3")
+
+[node name="ColorRect" type="ColorRect" parent="FinalScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FinalScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="FinalScreen/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_cwwag")
+text = "You WIN!!! :3"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FinalScreen/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="FinalScreenRetryButton" type="Button" parent="FinalScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Reintentar"
+
+[node name="FinalScreenExitButton" type="Button" parent="FinalScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Salir"
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[connection signal="win" from="." to="FinalScreen" method="_on_game_win"]
+[connection signal="pressed" from="HBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="lose" from="HBoxContainer/TimerUI" to="." method="_on_timer_ui_lose"]
+[connection signal="lose" from="HBoxContainer/TimerUI" to="FinalScreen" method="_on_timer_ui_lose"]
+[connection signal="pressed" from="FinalScreen/VBoxContainer/HBoxContainer/FinalScreenRetryButton" to="." method="_on_final_screen_retry_button_pressed"]
+[connection signal="pressed" from="FinalScreen/VBoxContainer/HBoxContainer/FinalScreenExitButton" to="." method="_on_final_screen_exit_button_pressed"]
+[connection signal="timeout" from="Timer" to="HBoxContainer/TimerUI" method="_on_timer_timeout"]
